@@ -1,0 +1,11 @@
+<input type="text" name="serverName" class="form-control" [(ngModel)]="serverName">
+<button class="btn btn-primary" (click)="onCreateServer()" [disabled] = !allowNewServer>Add Server</button>
+<p *ngIf="serverCreated">{{serverCreationStatus}}</p>
+
+<br/>
+<p [ngStyle]="{backgroundColor : getColor()}">Server with ID {{serverId}} is  {{serverStatus}}</p>
+<br/>
+<p  [ngClass]="{online:checkServerStatus()}">Server with ID {{serverId}} is  {{serverStatus}}</p>
+
+
+
